@@ -1,0 +1,8 @@
+body {
+  margin: 0 auto;
+  padding: 1rem;
+
+  @media (min-width: 700px) {
+    width: 50%;
+  }
+}

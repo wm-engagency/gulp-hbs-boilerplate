@@ -1,0 +1,15 @@
+{{#> layouts/main home }}
+
+  {{#*inline "content"}}
+    <p>
+      In the src directory, there are 'assets' and 'templates'. Assets have all the fonts, icons, images, scripts, and scss files, sorted into directories. Templates have all of the handlebars files. In src, you can make a new *.html file and it will be rendered. If you are wanting to add links to these files, you can add them in the home.json file, there are some placeholder links there so you can see the structure.
+    </p>
+    {{> components/image-test this.image}}
+    <ul>
+      {{#each this.pageLinks~}}
+        <li><a href="{{href}}">{{title}}</a>
+      {{/each}}
+    </ul>
+ {{/inline}}
+
+{{/layouts/main}}

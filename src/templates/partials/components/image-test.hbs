@@ -1,3 +1,8 @@
-<div class="logo">
-  <img src="{{logo-src}}" alt="{{logo-alt}}" />
-</div>
+<figure>
+  <picture class="logo">
+    <source srcset="{{webp}}" type="image/webp">
+    <source srcset="{{jpg}}" type="image/jpg">
+    <img src="{{src}}" alt="{{alt}}">
+  </picture>
+  <figcaption>{{caption}}</figcaption>
+</figure>

@@ -4,7 +4,10 @@
 @import 'abstracts/mixins';
 
 @import 'base/resets';
+@import 'base/icons';
+@import 'base/typography';
 
+@import 'layout/body';
 @import 'layout/header';
 @import 'layout/navigation';
 @import 'layout/footer';

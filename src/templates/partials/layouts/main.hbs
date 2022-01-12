@@ -13,15 +13,16 @@
 
       <header>
         <div class="content">
-          {{> includes/header }}
+          {{> includes/header header}}
 
         </div>
       </header>
-
-
+      <section>
+        {{#>content}}{{/content}}
+      </section>
       <footer>
         <div class="content">
-          {{> includes/footer }}
+          {{> includes/footer footer}}
 
         </div>
       </footer>
@@ -31,5 +32,7 @@
     {{#> scripts-block}}
       {{!-- Custom scripts per page can be added. --}}
     {{/scripts-block}}
+    
+    <script src="./assets/scripts/main.js"></script>
   </body>
 </html>
