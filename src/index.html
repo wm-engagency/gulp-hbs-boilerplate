@@ -2,8 +2,31 @@
 
   {{#*inline "content"}}
     <p>
-      In the src directory, there are 'assets' and 'templates'. Assets have all the fonts, icons, images, scripts, and scss files, sorted into directories. Templates have all of the handlebars files. In src, you can make a new *.html file and it will be rendered. If you are wanting to add links to these files, you can add them in the home.json file, there are some placeholder links there so you can see the structure.
+      In the src directory, there are 'assets' and 'templates'. Assets have all the fonts, icons, images, scripts, and scss files, sorted into directories. Templates have all of the handlebars files. In src, you can make a new *.html file and it will be rendered. If you are wanting to add links to these files, you can add them in the <code>home.json</code> file, there are some placeholder links there so you can see the structure.
     </p>
+    <p>Project structure:</p>
+    <pre>
+      <code>
+        src/
+          |___assets/
+                    |___fonts/
+                    |___icons/
+                    |___images/
+                    |___scripts/
+                    |___scss/
+          |___templates/
+                    |___data/
+                    |___partials/
+                    |___includes/
+                    |___layouts/
+          *.html
+      </code>
+    </pre>
+    <p>In style.scss, there is an import for a reset file. If you do not want to use this for your project, you can comment out or remove the import statement.</p>
+    <pre>
+      <code>@import 'base/resets';</code>
+    </pre>
+    <p>The SCSS for this boilerplate is using the 7-1 file structure.</p>
     {{> components/image-test this.image}}
     <ul>
       {{#each this.pageLinks~}}

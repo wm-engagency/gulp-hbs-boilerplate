@@ -249,7 +249,7 @@ exports.icons = series(icons);
 exports.media = series(img, video);
 
 // Compile, Watch and Reload (gulp watch)
-exports.watch = parallel(series(hbs, css, js, fonts), series(img, video), series(server, changed));
+exports.serve = parallel(series(hbs, css, js, fonts), series(img, video), series(server, changed));
 
 // Clean Old Files and Compile Everything - without running a browser (gulp)
 exports.default = series(clean, parallel(hbs), parallel(css), parallel(js), parallel(fonts), parallel(img, series(video)));

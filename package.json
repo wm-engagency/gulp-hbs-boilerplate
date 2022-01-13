@@ -4,10 +4,9 @@
   "description": "A Handlebars and Gulp 4 boilerplate",
   "main": "index.js",
   "scripts": {
-    "start": "gulp watch",
-    "build": "gulp",
     "clean": "gulp clean",
-    "deploy": "gh-pages -d build"
+    "dev": "gulp serve",
+    "prod": "gulp"
   },
   "repository": {
     "type": "git",

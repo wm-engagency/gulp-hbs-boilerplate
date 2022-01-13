@@ -1,6 +1,6 @@
 {
   "header": {
-    "content": "Oh hi! 👋 The icon on the far-left is rendered from an icon font, using the classes 'icon icon-accomodation-alt'"
+    "content": "Oh hi! 👋 The icon on the far-left is rendered from an icon font, using the classes `icon icon-accomodation-alt`"
   },
   "footer": {
     "clientName": "A Basic Footer LLC"

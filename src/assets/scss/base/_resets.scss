@@ -1,1 +1,11 @@
 @import 'node_modules/the-new-css-reset/css/reset';
+
+a {
+  text-decoration: underline;
+  color: blue;
+  cursor: pointer;
+
+  &:hover {
+    color: fuchsia;
+  }
+}
