@@ -18,7 +18,6 @@ Engagency's View Environment is a boilerplate for building frontend projects usi
 - Watch for file changes and automatically recompile.
 - Reload webpages.
 
-
 ## Getting started
 
 Make sure have the following installed:
@@ -27,7 +26,6 @@ Make sure have the following installed:
 [Gulp Command Line Utility](https://gulpjs.com/) `npm install -g gulp-cli`
 
 ##
-
 
 **Quick Start**
 
