@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jonwelsh/gulp-hbs-boilerplate.git"
+    "url": "git+https://github.com/wm-engagency/gulp-hbs-boilerplate"
   },
   "keywords": [
     "gulp",
@@ -19,9 +19,9 @@
   "author": "William Harrison",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jonwelsh/gulp-hbs-boilerplate/issues"
+    "url": "https://github.com/wm-engagency/gulp-hbs-boilerplate/issues"
   },
-  "homepage": "https://github.com/jonwelsh/gulp-hbs-boilerplate#readme",
+  "homepage": "https://github.com/wm-engagency/gulp-hbs-boilerplate#readme",
   "devDependencies": {
     "@babel/core": "^7.12.10",
     "@babel/plugin-proposal-class-properties": "^7.12.1",
