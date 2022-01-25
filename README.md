@@ -14,6 +14,7 @@ Engagency's Front End View Environment is a boilerplate for building the front e
 - Identify scripts and styles with project details (see `config.js -> banners`).
 - Creates sourcemaps for both minified scripts and styles.
 - Reduce JPG file sizes and make a WebP copy.
+  - WebP can be enabled / disabled by setting the `webp` property to `true` or `false` in the `config.js` file (i.e. `images: { webp: false }`)
 - Optimise SVGs.
 - Watch for file changes and automatically recompile.
 - Reload webpages.
