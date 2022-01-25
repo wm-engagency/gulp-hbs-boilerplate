@@ -60,7 +60,7 @@
     "gulp-sourcemaps": "^3.0.0",
     "gulp-terser": "^2.0.1",
     "gulp-webp": "^4.0.1",
-    "jshint": "^2.12.0",
+    "jshint": "^2.13.4",
     "jshint-stylish": "^2.2.1",
     "normalize.css": "^8.0.1",
     "sassdoc": "^2.7.3",

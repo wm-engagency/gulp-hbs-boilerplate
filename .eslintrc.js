@@ -13,5 +13,6 @@ module.exports = {
 		'no-console': 'off',
 		'no-unused-vars': 'off',
 		'no-constant-condition': 'off'
-	}
+	},
+  ignorePatterns: ["./dist/**/*.js"]
 };

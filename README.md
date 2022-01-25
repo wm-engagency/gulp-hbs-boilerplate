@@ -1,6 +1,6 @@
-# Gulp 4 / Handlebars / SCSS boilerplate - EVE (Engagency View Environment)
+# Engagency Front End View Environment
 
-Engagency's View Environment is a boilerplate for building frontend projects using Gulp 4, Handlebars & SCSS. The goal of this is to standardize frontend projects for uniformity across development projects.
+Engagency's Front End View Environment is a boilerplate for building the front end of our projects using Gulp 4, Handlebars for HTML templating, SCSS. The goal of this environment is to standardize front end development for uniformity across projects.
 
 **Features**
 
