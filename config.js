@@ -49,4 +49,7 @@ module.exports = {
     ' | <%= packageDetails.repository.url %>' +
     ' */\n',
   },
+  images: {
+    webp: true
+  },
 }

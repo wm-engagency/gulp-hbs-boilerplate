@@ -16,10 +16,12 @@ const packageDetails = require('./package.json');
 var handlebars = require('gulp-hb');
 
 // Styles
-const sass = require('gulp-sass');
-const prefix = require('gulp-autoprefixer');
+const sass = require('gulp-dart-sass');
+const prefix = require('autoprefixer');
+const postcss = require('gulp-postcss');
 const purgecss = require('gulp-purgecss');
 const cleanCss = require('gulp-clean-css');
+const sassdoc = require('sassdoc');
 
 // Icons
 const iconfont = require('gulp-iconfont');
@@ -78,15 +80,10 @@ function css() {
         },
       })
     )
-    .pipe(sass({ outputStyle: 'expanded', sourceComments: true }))
+    .pipe(sassdoc({ dest: './dist/sassdoc' }))
+    .pipe(sass({ outputStyle: 'compressed' }))
     .on('error', sass.logError)
-    .pipe(
-      prefix({
-        cascade: true,
-        remove: true,
-        grid: 'autoplace',
-      })
-    )
+    .pipe(postcss([prefix()]))
     .pipe(
       purgecss({
         content: ['src/*.html', 'src/**/*.hbs'],
@@ -165,7 +162,7 @@ function js() {
 
 // Optimize Images
 function img() {
-  return src(config.paths.images.input)
+  let source = src(config.paths.images.input)
     .pipe(newer(config.paths.images.output))
     .pipe(
       imagemin([
@@ -179,8 +176,16 @@ function img() {
     )
     .pipe(dest(config.paths.images.output))
     .pipe(newer(config.paths.images.output))
-    .pipe(webp())
+
+    if (config.images.webp) {
+      source = source
+      .pipe(webp())
+    }
+
+    source = source
     .pipe(dest(config.paths.images.output))
+
+    return source;
 }
 
 // Copy Video Files
@@ -203,35 +208,35 @@ function changed() {
   return (
     watch(
       ['src/assets/scss/**/*.scss'],
-      series(css, function cssRelaod(done) {
+      series(css, function cssReload(done) {
         browserSync.reload()
         done()
       })
     ),
     watch(
       ['src/templates/**/*.*'],
-      series(hbs, function hbsRelaod(done) {
+      series(hbs, function hbsReload(done) {
         browserSync.reload()
         done()
       })
     ),
     watch(
       ['src/**/*.html'],
-      series(hbs, function hbsRelaod(done) {
+      series(hbs, function hbsReload(done) {
         browserSync.reload()
         done()
       })
     ),
     watch(
       ['src/assets/scripts/'],
-      series(js, function jsRelaod(done) {
+      series(js, function jsReload(done) {
         browserSync.reload()
         done()
       })
     ),
     watch(
       ['src/assets/images/'],
-      series(img, function imagesRelaod(done) {
+      series(img, function imagesReload(done) {
         browserSync.reload()
         done()
       })
